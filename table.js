@@ -26,12 +26,12 @@ smallDataXhr.addEventListener('load', () =>
     showTable(data);
     showPaginator(data);
     currentData = data;
-})
+});
 
 bigDataButton.addEventListener('click', () => 
 {    
     preloader.classList.remove('hidden');  
-    bigDataXhr.open('GET', 'http://www.filltext.com/?rows=1000&id=%7Bnumber%7C1000%7D&firstName=%7BfirstName%7D&delay=3&lastName=%7BlastName%7D&email=%7Bemail%7D&phone=%7Bphone%7C(xxx)xxx-xx-xx%7D&address=%7BaddressObject%7D&description=%7Blorem%7C32%7D')
+    bigDataXhr.open('GET', 'http://www.filltext.com/?rows=1000&id=%7Bnumber%7C1000%7D&firstName=%7BfirstName%7D&delay=3&lastName=%7BlastName%7D&email=%7Bemail%7D&phone=%7Bphone%7C(xxx)xxx-xx-xx%7D&address=%7BaddressObject%7D&description=%7Blorem%7C32%7D');
     bigDataXhr.send();
 });
 
@@ -45,7 +45,7 @@ bigDataXhr.addEventListener('load', () =>
         showTable(data.slice(0,50));
         showPaginator(data);
     }
-})
+});
 
 function showPaginator(data)
 {
@@ -66,7 +66,7 @@ function sortTable(prop, dir)
     currentData
         .sort((a,b) => 
         {
-        return a[prop] > b[prop] ? dir : -dir
+        return a[prop] > b[prop] ? dir : -dir;
         })
         .forEach((item, i) => 
         {
@@ -95,7 +95,7 @@ function createTable(data)
       {
         fragment.appendChild(row);
         return fragment;
-      }, document.createDocumentFragment())
+      }, document.createDocumentFragment());
 }
 
 function createRow(item, i)
@@ -133,7 +133,7 @@ table.addEventListener('click', () => {
              Адрес проживания: <b>${row.address.streetAddress}</b><br>
              Город: <b>${row.address.city}</b><br>
              Провинция/штат: <b>${row.address.state}</b><br>
-             Индекс: <b>${row.address.zip}</b>`    
+             Индекс: <b>${row.address.zip}</b>`;
     }
 });
 
@@ -147,7 +147,7 @@ paginator.addEventListener('click', () =>
         showTable(data.slice((index - 1) * 50, index * 50));
         currentData = data.slice((index - 1) * 50, index * 50);
     }
-})
+});
 
 function filter(element) 
 {
@@ -162,10 +162,10 @@ function filter(element)
                 break;
             }
         }
-    })
+    });
 }
 find.addEventListener('click', () =>
 {
     event.preventDefault();
-    filter(document.querySelector('#find').value)
+    filter(document.querySelector('#find').value);
 })
