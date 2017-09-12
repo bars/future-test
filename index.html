@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <button class="small">getSmallData</button>
+    <button class="big">getBigData</button>
+    <form>
+        <input id = "find" type="text">
+         <input id = "findbutton" type="submit" class ="button" value="find">
+    </form>
+    <div class="preloader hidden">
+        <span>Loading</span>
+    </div>
+    <table class = 'table hidden'>
+        <thead>
+            <tr>
+                <th data-dir = '1' data-prop-name = 'id'>id</th>
+                <th data-dir = '1' data-prop-name = 'firstName'>firstName</th>
+                <th data-dir = '1' data-prop-name = 'lastName'>lastName</th>
+                <th data-dir = '1' data-prop-name = 'email'>email</th>
+                <th data-dir = '1' data-prop-name = 'phone'>phone</th>
+            </tr>            
+        </thead>
+      <tbody></tbody>
+    </table>
+    <div class = "info"></div>
+    <div class="pagination hidden">
+        <ul></ul>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

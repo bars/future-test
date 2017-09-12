@@ -1,0 +1,42 @@
+.preloader {
+    display: inline-block;
+    color: red;
+}
+.hidden {
+    display: none;
+}
+table {
+    width: 80%;
+}
+thead, tbody {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+tr {
+     display: flex;
+}
+td, th {
+    flex: 1;
+    border-left: 1px solid black;
+}
+td {
+    padding-left: 10px;
+}
+.pagination ul li {
+    display: inline-block;
+    padding: 5px;
+}
+[data-sort-by='id'] th[data-dir='1'][data-prop-name='id']:after, [data-sort-by='firstName'] th[data-dir='1'][data-prop-name='firstName']:after, [data-sort-by='lastName'] th[data-dir='1'][data-prop-name='lastName']:after, [data-sort-by='email'] th[data-dir='1'][data-prop-name='email']:after, [data-sort-by='phone'] th[data-dir='1'][data-prop-name='phone']:after {
+    content: '▼';
+}
+[data-sort-by='id'] th[data-dir='-1'][data-prop-name='id']:after, [data-sort-by='firstName'] th[data-dir='-1'][data-prop-name='firstName']:after, [data-sort-by='lastName'] th[data-dir='-1'][data-prop-name='lastName']:after, [data-sort-by='email'] th[data-dir='-1'][data-prop-name='email']:after, [data-sort-by='phone'] th[data-dir='-1'][data-prop-name='phone']:after {
+    content: '▲';
+}
+td:first-child, th:first-child {
+    border-left: 0;
+}
+form {
+    display: inline-block;
+}
